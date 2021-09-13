@@ -1,0 +1,15 @@
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://todoapp@postgres/todos?schema=public"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Job {
+  id       Int    @id @default(autoincrement())
+  title    String
+  location String
+  salary   String
+}
